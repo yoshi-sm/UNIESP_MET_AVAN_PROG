@@ -1,24 +1,56 @@
-import java.util.ArrayList;
-import java.util.Collection;
+//import java.util.ArrayList;
+//import java.util.Collection;
 
 public class Cliente {
     private String nome;
+    private String rg;
+    private Integer pontosDeAlugadorFrequente;
 
-    private Collection<Aluguel> fitasAlugadas = new ArrayList<Aluguel>();
+    //private Collection<Aluguel> fitasAlugadas = new ArrayList<Aluguel>();
 
-    public Cliente(String nome) {
+    public Cliente(String nome, String rg, Integer pontosDeAlugadorFrequente) {
         this.nome = nome;
+        this.rg = rg;
+        this.pontosDeAlugadorFrequente = pontosDeAlugadorFrequente;
     }
 
     public String getNome() {
         return nome;
     }
+    
+    public void setNome(String nome) {
+    	this.nome = nome;
+    }
+    
+    @Override
+	public String toString() {
+		return "Cliente [nome=" + nome + ", rg=" + rg + ", pontosDeAlugadorFrequente=" + pontosDeAlugadorFrequente
+				+ "]";
+	}
 
-    public void adicionaAluguel(Aluguel aluguel) {
-        fitasAlugadas.add(aluguel);
+	public String getRg() {
+    	return this.rg;
+    }
+    
+    public void setRg(String rg) {
+    	this.rg = rg;
     }
 
-    public String extrato() {
+	public Integer getPontosDeAlugadorFrequente() {
+		return pontosDeAlugadorFrequente;
+	}
+
+	public void setPontosDeAlugadorFrequente(Integer pontosDeAlugadorFrequente) {
+		this.pontosDeAlugadorFrequente = pontosDeAlugadorFrequente;
+	}
+    
+    
+
+    /*public void adicionaAluguel(Aluguel aluguel) {
+        fitasAlugadas.add(aluguel);
+    }*/
+
+    /*public String extrato() {
         final String fimDeLinha = System.getProperty("line.separator");
         double valorTotal = 0.0;
         int pontosDeAlugadorFrequente = 0;
@@ -67,5 +99,5 @@ public class Cliente {
         resultado += "Voce acumulou " + pontosDeAlugadorFrequente
                      + " pontos de alugador frequente";
         return resultado;
-    }
+    }*/
 }

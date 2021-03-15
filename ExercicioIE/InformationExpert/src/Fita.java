@@ -19,4 +19,10 @@ public class Fita {
     public void setCodigoDePrevo(Tipo codigoDePreco) {
         this.codigoDePreco = codigoDePreco;
     }
+
+	@Override
+	public String toString() {
+		return "Fita [titulo=" + titulo + ", codigoDePreco=" + codigoDePreco + "]";
+	}
+    
 }
